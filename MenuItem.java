@@ -1,55 +1,61 @@
-public class MenuItem{
+public class MenuItem {
     private String nama;
     private double harga;
     private String kategori;
     private int stok;
-    
+
     public MenuItem(String nama, double harga, String kategori) {
         this.nama = nama;
         this.harga = harga;
         this.kategori = kategori;
         this.stok = 0;
     }
+
     public MenuItem(String nama, double harga, String kategori, int stok) {
         this.nama = nama;
         this.harga = harga;
         this.kategori = kategori;
         this.stok = stok;
     }
+
     public String getNama() {
         return nama;
     }
+
     public double getHarga() {
         return harga;
     }
-    public String getKategori(){
+
+    public String getKategori() {
         return kategori;
     }
-    public int getStok(){
+
+    public int getStok() {
         return stok;
     }
-    public void SetHarga(double hargaBaru){
+
+    public void setHarga(double hargaBaru) {
         this.harga = hargaBaru;
     }
-    public void tambahStok(int jumlah){
+
+    public void tambahStok(int jumlah) {
         stok += jumlah;
     }
-    public boolean kurangiStok(){
-        if(stok > 0){
+
+    public boolean kurangiStok() {
+        if (stok > 0) {
             stok--;
             return true;
-        }else{
-            return false;
         }
+        return false;
     }
-    public boolean isAvailable(){
+
+    public boolean isAvailable() {
         return stok > 0;
     }
-    public void displayInfo(){
-        System.out.println("Nama: " + nama);
-        System.out.println("Harga: " + harga);
-        System.out.println("Kategori: " + kategori);
-        System.out.println("Stok: " + stok);
+
+    public void displayInfo() {
+        System.out.println(nama + " | Rp" + String.format("%.0f", harga) 
+    + " | " + kategori + " | Stok: " + stok);
     }
 }
-

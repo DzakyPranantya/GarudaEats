@@ -1,58 +1,63 @@
-public class Customer{
+public class Customer {
     private String nama;
     private String nim;
     private double saldo;
     private int poin;
-    
-    public Customer(String nama, String nim){
+
+    public Customer(String nama, String nim) {
         this.nama = nama;
         this.nim = nim;
         this.saldo = 0;
         this.poin = 0;
     }
-    public Customer(String nama, String nim, double saldoAwal){
+
+    public Customer(String nama, String nim, double saldoAwal) {
         this.nama = nama;
         this.nim = nim;
         this.saldo = saldoAwal;
         this.poin = 0;
     }
-    public String getNama(){
+
+    public String getNama() {
         return nama;
     }
-    public String getNim(){
+
+    public String getNim() {
         return nim;
     }
-    public double getSaldo(){
+
+    public double getSaldo() {
         return saldo;
     }
-    public int getPoin(){
+
+    public int getPoin() {
         return poin;
     }
-    public void topUpSaldo(double jumlah){
-        if(jumlah <= 0){
-            System.out.print("Nominal TopUp tidak valid");
+
+    public void topUpSaldo(double jumlah) {
+        if (jumlah <= 0) {
+            System.out.println("Nominal tidak valid");
+        } else {
+            saldo += jumlah;
         }
-        }
-    public boolean bayar(double jumlah){
-        if(saldo < jumlah){
-            System.out.println("Saldo tidak mencukupi");
+    }
+
+    public boolean bayar(double jumlah) {
+        if (saldo < jumlah) {
+            System.out.println("Saldo tidak cukup");
             return false;
         }
         saldo -= jumlah;
         return true;
     }
-    public void tambahPoin(int poin){
-        if(poin < 0){
-            System.out.println("Poin tidak valid");
-        }else{
+
+    public void tambahPoin(int poin) {
+        if (poin > 0) {
             this.poin += poin;
         }
-        }
-    public void displayInfo(){
-        System.out.println("Nama: "+nama);
-        System.out.println("NIM: "+nim);
-        System.out.println("Saldo: "+saldo);
-        System.out.println("Poin: "+poin);
-       }
+    }
 
+    public void displayInfo() {
+        System.out.println(nama + " | " + nim + " | Saldo: " + saldo + " | Poin: " + poin);
+    }
 }
