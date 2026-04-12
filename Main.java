@@ -18,7 +18,7 @@ public class Main {
         kantin.tambahMenu(m6);
 
         Customer c1 = new Customer("Dzaky", "102022530077");
-        Customer c2 = new Customer("Naufal", "102022500384", 10000);
+        Customer c2 = new Customer("Naufal", "102022500384", 10001);
 
         c1.topUpSaldo(50000);
 
