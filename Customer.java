@@ -44,7 +44,7 @@ public class Customer {
 
     public boolean bayar(double jumlah) {
         if (saldo < jumlah) {
-            System.out.println("Saldo tidak cukup");
+            System.out.println("Saldo Ga Cukup");
             return false;
         }
         saldo -= jumlah;

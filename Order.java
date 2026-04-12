@@ -31,17 +31,17 @@ public class Order {
 
     public boolean tambahItem(MenuItem item) {
         if (!status.equals("MENUNGGU")) {
-            System.out.println("Tidak bisa tambah item");
+            System.out.println("Tidak Bisa Tambah Item");
             return false;
         }
 
         if (jumlahItem >= items.length) {
-            System.out.println("Pesanan penuh");
+            System.out.println("Pesanan Penuh");
             return false;
         }
 
         if (!item.isAvailable()) {
-            System.out.println("Stok habis");
+            System.out.println("Stok Habis");
             return false;
         }
 
@@ -79,7 +79,7 @@ public class Order {
 
     public void batalkanOrder() {
         if (status.equals("SELESAI")) {
-            System.out.println("Tidak bisa dibatalkan");
+            System.out.println("Tidak Bisa Dibatalkan");
         } else {
             status = "DIBATALKAN";
         }
