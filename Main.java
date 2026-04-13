@@ -6,7 +6,7 @@ public class Main {
         MenuItem m1 = new MenuItem("Nasi Pancal", 3000, "Makanan", 5);
         MenuItem m2 = new MenuItem("Bakso Pentol Goreng", 15000, "Makanan", 5);
         MenuItem m3 = new MenuItem("Es Teh", 5000, "Minuman", 5);
-        MenuItem m4 = new MenuItem("Kopi Dukun", 8000, "Minuman", 5);
+        MenuItem m4 = new MenuItem("Kopi Hitam", 8000, "Minuman", 5);
         MenuItem m5 = new MenuItem("Weci", 3000, "Snack", 5);
         MenuItem m6 = new MenuItem("Hongkong", 3000, "Snack", 5);
 
